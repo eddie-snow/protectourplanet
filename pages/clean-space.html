@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/space-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>clean space</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../images/space_svg.svg"></a>
+        <ul>
+            <li><a href="../index.html">Planet</a></li>
+            <li><a href="./water.html">Water</a></li>
+            <li><a href="./clean-space.html" class="active">Space</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="../images/space-stars.png" id="stars">
+        <img src="../images/space-moon.png" id="moon">
+        <img src="../images/space-mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Clean Space</h2>
+        <a href="#" id="btn">scroll &#8595;</a>
+        <img src="../images/space-mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>What is space junk?</h2>
+        <p>
+            Space junk, or space debris, is any piece of machinery or debris left by humans in space.<br>
+            It can refer to big objects such as dead satellites that have failed or been left in orbit at the end of their mission. It can also refer to smaller things, like bits of debris or paint flecks that have fallen off a rocket.<br>
+            Some human-made junk has been left on the Moon, too.
+        
+            <h3>How much space junk is there?</h3>
+            <p>While there are about 2,000 active satellites orbiting Earth at the moment, there are also 3,000 dead ones littering space. What's more, there are around 34,000 pieces of space junk bigger than 10 centimetres in size and millions of smaller pieces that could nonetheless prove disastrous if they hit something else.<br>
+               All space junk is the result of us launching objects from Earth, and it remains in orbit until it re-enters the atmosphere.<br>
+               Some objects in lower orbits of a few hundred kilometres can return quickly. They often re-enter the atmosphere after a few years and, for the most part, they'll burn up - so they don't reach the ground. But debris or satellites left at higher altitudes of 36,000 kilometres - where communications and weather satellites are often placed in geostationary orbits - can continue to circle Earth for hundreds or even thousands of years.
+            </p>
+            <h3>What risks does space junk pose to space exploration?</h3>
+            <p>
+                Fortunately, at the moment, space junk doesn't pose a huge risk to our exploration efforts. The biggest danger it poses is to other satellites in orbit.<br>
+                These satellites have to move out of the way of all this incoming space junk to make sure they don't get hit and potentially damaged or destroyed.<br>
+                In total, across all satellites, hundreds of collision avoidance manoeuvres are performed every year, including by the International Space Station (ISS), where astronauts live.<br>
+            </p>
+            <h3>Will space junk be a problem in the future?</h3>
+            <p>
+                It could well be.<br>
+                Several companies are planning vast new groups of satellites, called mega constellations, that will beam internet down to Earth.<br>
+                These companies, which include SpaceX and Amazon, plan to launch thousands of satellites to achieve global satellite internet coverage.<br>
+                If successful, there could be an additional 50,000 satellites in orbit. This also means a lot more collision avoidance manoeuvres will need to be done.
+            </p>
+            <h3>How can we clean up space junk?</h3>
+            <p>The United Nations ask that all companies remove their satellites from orbit within 25 years after the end of their mission.This is tricky to enforce, though, because satellites can (and often do) fail. To tackle this problem, several companies around the world have come up with novel solutions.<br>
+               These include removing dead satellites from orbit and dragging them back into the atmosphere, where they will burn up. Ways we could do this include using a harpoon to grab a satellite, catching it in a huge net, using magnets to grab it, or even firing lasers to heat up the satellite, increasing its atmospheric drag so that it falls out of orbit.
+            </p>
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header =document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.marginRight = value * 4.2 +'px';
+            text.style.marginTop = value * 1.5 +'px';
+            btn.style.marginTop = value * 1.5 +'px';
+            header.style.top = value * 0.5 +'px';
+        });
+    </script>
+</body>
+</html>
